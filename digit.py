@@ -85,6 +85,6 @@ test_accuracy = sess.run(accuracy, feed_dict={X: mnist.test.images, Y: mnist.tes
 print("\nAccuracy on test set:", test_accuracy)
 
 # Test image
-img = np.invert(Image.open("test_image.png").convert('L')).ravel()
+img = np.invert(Image.open("test_img.png").convert('L')).ravel()
 prediction = sess.run(tf.argmax(output_layer, 1), feed_dict={X: [img]})
 print ("Prediction for test image:", np.squeeze(prediction))
